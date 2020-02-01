@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700");
+@import url(../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    background: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    text-align: center;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-40 {
+    flex: 40%;
+}
+
+.col-50 {
+    flex: 50%;
+}
+
+.col-60 {
+    flex: 60%;
+}
+
+.align-left {
+    text-align: left; 
+}
+  
+.align-center {
+    text-align: center; 
+}
+  
+.align-right {
+    text-align: right; 
+}
+
+.coral {
+    background-color: #ff5e6c;
+}
+
+.pink {
+    background-color: #ffaaab;
+}
+
+.mustard {
+    background-color: #feb300;
+}
+
+.beige {
+    background-color: #fcf6e6;
+}
+
+.navy {
+    color: rgb(0, 0, 48);
+}
+
+.dark-grey {
+    color: #3d4449;
+}
+
+.light-grey {
+    color: #7f888f;
+}
+
+a {
+    text-decoration: none;
+    color:  #3d4449;
+}
+
+/* Header */
+
+.logo-container {
+    flex: 50%;
+}
+
+.logo {
+    height: 70px;
+    padding: 15px;
+}
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative; 
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 1.5em;
+    font-style: normal;
+    color: rgb(0, 0, 48);
+}
+
+.icon > .label {
+    display: none; 
+}
+
+ul.icons {
+    list-style: none;
+    flex: 50%;
+    height: 70px;
+    padding: 15px 0 15px 0;
+}
+
+ul.icons li {
+    padding: 0 1em 0 0; 
+    display: inline-block;
+}
+
+.contact-btn {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+    cursor: pointer;
+    background-color: white;
+    color: #FF9999;
+    border: 2px solid #FF9999;
+    height: 50px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.contact-btn:hover {
+    background-color: #FF9999;
+    color: white;
+}
+
+#header {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: relative; 
+    width: 100%;
+    display: flex;
+    z-index: 0;
+    background: white;
+}
+
+#header .icons {
+    text-align: right; 
+}
+
+#languages {
+    text-transform: uppercase;
+    color: #3d4449;
+    letter-spacing: 0.2em;
+}
+
+.headshot {
+    max-width: 300px;
+    position: relative;
+    z-index: 2;
+    padding-top: 40px;
+}
+
+.bio {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    width: 90%;
+    margin: 10%;
+    color: #3d4449;
+    text-align: left;
+    font-size: 1.4em;
+}
+
+.info {
+    width: 100%;
+}
+
+.project-btn {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+    cursor: pointer;
+    background-color: white;
+    color: #FFCC66;
+    border: 2px solid #FFCC66;
+    height: 60px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.project-btn:hover {
+    background-color: #FFCC66;
+    color: white;
+}
+
+.projects {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.carousel {
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 0 3em 0;
+    color: white;
+}
+
+.slide > * {
+    width: 100%;
+}
+
+.track-container {
+    background: #000033;
+    padding: 10px;
+    position: relative;
+    height: 80vh;
+}
+
+.track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border-radius: 50%;
+    border-color: #FF9999;
+    color: #FF9999;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 8px 16px;
+}
+
+.carousel-btn:hover {
+    background-color: #FF9999;
+    color: white;
+}
+
+.car-btn-right {
+    right: -10%;
+}
+
+.car-btn-left {
+    left: -10%;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.slide-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, .3);
+    margin: 0 10px;
+}
+
+.slide-indicator.current {
+    background: rgba(0, 0, 0, .75);
+}
+
+@media only screen and (max-width: 600px) {
+    .col {
+        flex: 100%;
+    }
+
+    .headshot {
+        margin: 0 20% 0 20%;
+    }
+}
