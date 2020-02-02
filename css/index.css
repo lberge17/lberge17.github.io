@@ -175,7 +175,7 @@ ul.icons li {
 .bio {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     width: 90%;
-    margin: 10%;
+    margin: 5%;
     color: #3d4449;
     text-align: left;
     font-size: 1.4em;
@@ -219,13 +219,13 @@ ul.icons li {
     color: white;
 }
 
-.slide > * {
-    width: 100%;
+.main-slide {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .track-container {
-    background: #000033;
-    padding: 10px;
+    background: white;
     position: relative;
     height: 80vh;
 }
