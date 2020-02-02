@@ -23,3 +23,15 @@ function listenContact() {
         popupContainer.classList.add('hidden');
     })
 }
+
+function submitForm () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzbYREl-WGXzLk0Uso8fSe1n3iTQZTWC2qG-h53c1G__RYvKaQ/exec';
+    const form = document.getElementById('popupForm');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+    })
+}
