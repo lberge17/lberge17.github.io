@@ -14,15 +14,25 @@ function addScroll () {
 
 function listenContact() {
     const contactBtn = document.querySelector('.contact-btn');
-    const popupContainer = document.getElementById('popupContainer');
+
     contactBtn.addEventListener('click', () => {
-        popupContainer.classList.remove('hidden');
+        openPopup();
     })
 
     const closeBtn = document.getElementById('close-popup');
     closeBtn.addEventListener('click', () => {
-        popupContainer.classList.add('hidden');
+        closePopup();
     })
+}
+
+function closePopup() {
+    const popupContainer = document.getElementById('popupContainer');
+    popupContainer.classList.add('hidden');
+}
+
+function openPopup() {
+    const popupContainer = document.getElementById('popupContainer');
+    popupContainer.classList.remove('hidden');
 }
 
 function submitForm () {
@@ -32,7 +42,14 @@ function submitForm () {
     form.addEventListener('submit', e => {
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
+          .then(response => {
+              console.log('Success!', response);
+              alert("Message sent. I will get back to you soon.")
+              closePopup();
+          })
+          .catch(error => {
+              console.error('Error!', error.message);
+              alert("Message failed to send. Please try again later or send me an email directly.")
+          })
     })
 }
