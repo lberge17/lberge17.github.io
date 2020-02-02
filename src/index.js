@@ -44,8 +44,8 @@ function submitForm () {
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {
               console.log('Success!', response);
-              alert("Message sent. I will get back to you soon.")
               closePopup();
+              alert("I will get back to you soon. - Laura Berge");
           })
           .catch(error => {
               console.error('Error!', error.message);
