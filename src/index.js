@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     addScroll();
     listenContact();
+    submitForm();
 })
 
 function addScroll () {
@@ -29,7 +30,7 @@ function submitForm () {
     const form = document.getElementById('popupForm');
 
     form.addEventListener('submit', e => {
-        e.preventDefault()
+        e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
           .catch(error => console.error('Error!', error.message))
