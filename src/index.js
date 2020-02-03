@@ -101,7 +101,7 @@ function moveCarousel(btnId) {
 
     if (direction === 'left' && prevSibling) {
         moveTrack(track, currentSlide, prevSibling);
-    } else if (nextSibling) {
+    } else if (direction === 'right' && nextSibling) {
         moveTrack(track, currentSlide, nextSibling);
     }
 }
