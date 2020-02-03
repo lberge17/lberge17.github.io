@@ -1,14 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    addScroll();
+    addProjectsScroll();
     listenContact();
     submitForm();
+    alignSlides();
+    addCarouselBtns();
 })
 
-function addScroll () {
+function addProjectsScroll () {
     const projectsBtn = document.querySelector('.project-btn');
     const projects = document.querySelector('.projects');
     projectsBtn.addEventListener('click', () => {
         window.scrollTo({ top: projects.offsetTop, behavior: 'smooth' });
+    })
+
+    listenNextProject();
+}
+
+function listenNextProject () {
+    const nextBtns = document.querySelectorAll('.next-project');
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const scrollTop = btn.offsetParent.nextElementSibling.offsetTop;
+            window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+        })
     })
 }
 
@@ -52,4 +66,48 @@ function submitForm () {
               alert("Message failed to send. Please try again later or send me an email directly.")
           })
     })
+}
+
+function alignSlides() {
+    const tracks = document.querySelectorAll('.track');
+    tracks.forEach(track => {
+        const slides = Array.from(track.children);
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        slides.forEach((slide, index) => {
+            slide.style.left = (slideWidth * index).toString() + 'px';
+        });
+    });
+}
+
+function addCarouselBtns() {
+    const carBtns = document.querySelectorAll('.carousel-btn');
+
+    carBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            moveCarousel(btn.id);
+        })
+    })
+}
+
+function moveCarousel(btnId) {
+    const trackId = btnId.split('-')[0] + '-track';
+    const direction = btnId.split('-')[1];
+    const track = document.getElementById(trackId);
+    const slides = Array.from(track.children);
+    const currentSlide = slides.find(slide => slide.classList.contains('current'));
+    const prevSibling = currentSlide.previousElementSibling;
+    const nextSibling = currentSlide.nextElementSibling;
+
+    if (direction === 'left' && prevSibling) {
+        moveTrack(track, currentSlide, prevSibling);
+    } else if (nextSibling) {
+        moveTrack(track, currentSlide, nextSibling);
+    }
+}
+
+function moveTrack(track, current, next) {
+    track.style.transform = 'translateX(-' + next.style.left + ')';
+    current.classList.remove('current');
+    next.classList.add('current');
 }

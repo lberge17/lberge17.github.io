@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700");
 
+/* basic styles and repetitive classes */
+
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     background: white;
@@ -99,6 +101,7 @@ a {
 
 .logo-container {
     flex: 50%;
+    text-align: left;
 }
 
 .logo {
@@ -168,6 +171,8 @@ ul.icons li {
     text-align: right; 
 }
 
+/* Bio/Intro section */
+
 #languages {
     text-transform: uppercase;
     color: #3d4449;
@@ -194,6 +199,8 @@ ul.icons li {
     width: 100%;
 }
 
+/* Button to scroll to projects */
+
 .project-btn {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     padding: 15px 32px;
@@ -214,6 +221,8 @@ ul.icons li {
     color: white;
 }
 
+/* Project Carousel section */
+
 .projects {
     min-height: 100vh;
     background-color: white;
@@ -225,7 +234,6 @@ ul.icons li {
     width: 80%;
     margin: 0 auto;
     padding: 3em 0 3em 0;
-    color: white;
 }
 
 .main-slide {
@@ -237,12 +245,15 @@ ul.icons li {
     background: white;
     position: relative;
     height: 80vh;
+    overflow: hidden;
 }
 
 .track {
     padding: 0;
     margin: 0;
     list-style: none;
+    height: 100%;
+    transition: transform 250ms ease-in;
 }
 
 .slide {
@@ -250,6 +261,7 @@ ul.icons li {
     top: 0;
     bottom: 0;
     width: 100%;
+    color: black;
 }
 
 .carousel-btn {
@@ -263,6 +275,7 @@ ul.icons li {
     cursor: pointer;
     font-size: 2em;
     padding: 8px 16px;
+    background-color: transparent;
 }
 
 .carousel-btn:hover {
@@ -284,18 +297,17 @@ ul.icons li {
     padding: 10px 0;
 }
 
-.slide-indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: rgba(0, 0, 0, .3);
-    margin: 0 10px;
+.next-project {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #FFCC66;
+    margin-top: 20px;
+    border: 2px solid #FFCC66;
+    background-color: transparent;
+    padding: 1px 5px;
 }
 
-.slide-indicator.current {
-    background: rgba(0, 0, 0, .75);
-}
+/* Pop Contact Form */
 
 #popupContact {
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -362,6 +374,8 @@ ul.icons li {
     font-size: 2em;
     cursor: pointer;
 }
+
+/* Media screen tweaking for responsiveness */
 
 @media only screen and (max-width: 600px) {
     .col {
