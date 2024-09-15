@@ -1,8 +1,7 @@
 @import url(./reset.css);
-@import url(./about.css);
 @import url(./nav.css);
+@import url(./about.css);
 @import url(./skills.css);
-
-* {
-    box-sizing: border-box;
-}
+@import url(./projects.css);
+@import url(./contact.css);
+@import url(./footer.css);

@@ -1,0 +1,12 @@
+#contact-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#contact-container h2 {
+    margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-link {
+    margin: 1rem;
+}

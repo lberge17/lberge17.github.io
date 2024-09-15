@@ -17,6 +17,9 @@
     --transition: 0.3rem
 }
 
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;

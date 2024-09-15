@@ -21,6 +21,7 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Laura Berge - Full Stack Developer</title>
 </head>
 <body>
@@ -54,8 +55,68 @@
             <p>Git | HTML | CSS | JavaScript | ReactJS | Redux | Ruby on Rails | Python</p>
         </div>
     </section>
-    <section id="projects-container"></section>
-    <section id="contact-container"></section>
+    <section id="projects-container" class="projects">
+        <h2 class="projects-title">Some of my Recent Projects</h2>
+        <div class="projects-wrapper">
+            <div class="project-wrapper project-card">
+                <img
+                  src="images/pawsbnb-home.png"
+                  alt="image of the home page for the pawsbnb application"
+                  loading="lazy"
+                  class="project-pic"
+                />
+                <h3 class="project-title">PawsBnB</h3>
+                <p class="project-details">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  ratione vel inventore labore commodi modi quos culpa aut saepe!
+                  Alias!
+                </p>
+                <a href="https://github.com/lberge17/pawsbnb" target="_blank" class="project-link">GitHub Repository</a>
+              </div>
+              <div class="project-wrapper project-card">
+                <img
+                  src="images/library-friends-library.png"
+                  alt="image of the Library Friends application"
+                  loading="lazy"
+                  class="project-pic"
+                />
+                <h3 class="project-title">Library Friends</h3>
+                <p class="project-details">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  ratione vel inventore labore commodi modi quos culpa aut saepe!
+                  Alias!
+                </p>
+                <a href="https://github.com/lberge17/library_friends" target="_blank" class="project-link">GitHub Repository</a>
+              </div>
+              <div class="project-wrapper project-card">
+                <img
+                  src="images/tasker-login.png"
+                  alt="image of Tasker application"
+                  loading="lazy"
+                  class="project-pic"
+                />
+                <h3 class="project-title">Tasker</h3>
+                <p class="project-details">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  ratione vel inventore labore commodi modi quos culpa aut saepe!
+                  Alias!
+                </p>
+                <a href="https://github.com/lberge17/tasker" target="_blank" class="project-link">GitHub Repository</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact-container">
+        <h2>Contact Links</h2>
+        <ul class="contact-wrapper">
+            <a href="https://www.github.com/lberge17" class="contact-link fa fa-github fa-3x"></a>
+            <a href="https://www.linkedin.com/in/laura-berge" class="contact-link fa fa-linkedin fa-3x"></a>
+            <a href="mailto:lauraeberge@gmail.com" class="contact-link fa fa-envelope fa-3x"></a>
+        </ul>
+    </section>
+    <footer>
+        <p class="copy">&copy; Copyright 2024</p>
+        <p class="copy">Built with &#x2661; by Laura Berge</p>
+    </footer>
     <script src="src/index.js" type="text/javascript"></script>
     <script
         type="module"
