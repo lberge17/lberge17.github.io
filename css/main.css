@@ -5,3 +5,7 @@
 @import url(./projects.css);
 @import url(./contact.css);
 @import url(./footer.css);
+
+.section-divider {
+    height: 5rem;
+}
