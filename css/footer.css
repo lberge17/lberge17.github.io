@@ -4,3 +4,17 @@ footer {
     text-align: center;
     margin: 2rem 0 0;
 }
+
+#scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary-color);
+    font-size: x-large;
+    border: 1px solid var(--primary-color);
+    border-radius: 2rem;
+    text-align: center;
+}
