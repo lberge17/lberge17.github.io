@@ -35,7 +35,7 @@ nav ul li {
 }
 
 #nav-logo {
-    max-height: 5em;
+    max-height: 4rem;
 }
 
 .burger-menu {
@@ -45,4 +45,34 @@ nav ul li {
     background-color: transparent;
     cursor: pointer;
     display: none;
+}
+
+@media screen and (max-width: 720px){
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 40%;
+        width: 60%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    
+    nav ul.show {
+        transform: translateX(0);
+    }
 }

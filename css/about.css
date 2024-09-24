@@ -27,3 +27,22 @@
     line-height: var(--line-height);
     padding: 0.3rem 0;
 }
+
+@media screen and (max-width: 720px) {
+    .about {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-img {
+        height: 37.5rem;    
+        width: 30rem;
+    }
+    
+    .about-bio {
+        margin-top: -7rem;
+        width: 20.5rem;
+        background-color: var(--bg-color);
+    }
+}
