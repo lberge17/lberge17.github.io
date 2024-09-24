@@ -5,10 +5,9 @@
     margin-top: 2.5rem;
 }
 
-.skills-header {
-    margin-bottom: 1rem;
-}
-
 .skills-wrapper p {
+    text-transform: uppercase;
+    color: #3d4449;
+    letter-spacing: 0.2em;
     padding: 1.25rem;
 }
